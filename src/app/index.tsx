@@ -3,11 +3,11 @@ import { ScrollView, View } from "react-native";
 
 import { Banner } from "../components/banner";
 import { Header } from "../components/header";
+import { RestaurantVerticalList } from "../components/list";
 import { Restaurants } from "../components/restaurants";
 import { Search } from "../components/search";
 import { Section } from "../components/section";
 import { TrendingFoods } from "../components/trending";
-
 const statusBarHeight = Constants.statusBarHeight;
 
 export default function Index() {
@@ -42,7 +42,18 @@ export default function Index() {
   size="text-xl"
   />
 
-<Restaurants />
+<Restaurants/>
+
+<Section
+  name="Restaurantes"
+  label="Veja todos"
+  action={ () => console.log("CLICOU NO RESTAURANTES")}
+  size="text-xl"
+  />
+
+
+  <RestaurantVerticalList />
+
 
 </ScrollView>  
 );

@@ -32,7 +32,8 @@ export function TrendingFoods() {
       data={foods}
       renderItem={({ item }) => <CardHorizontalFood food={item} />}
       horizontal={true}
-      contentContainerStyle={{ gap: 14 }}
+      contentContainerStyle={{ gap: 14, paddingLeft: 16 }}
+      showsHorizontalScrollIndicator={false}
     />
   );
 }
